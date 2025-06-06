@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "9f4aecdb-ada7-4239-89ac-2f56676f5ded",
+		"name": "fitness_booking_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39157162"
+	},
+	"item": [
+		{
+			"name": "fitness_classes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8001/classes?timezone=Asia/Kolkata",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8001",
+					"path": [
+						"classes"
+					],
+					"query": [
+						{
+							"key": "timezone",
+							"value": "Asia/Kolkata"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "book_class",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"class_id\": 1,\r\n    \"client_name\": \"Priya\",\r\n    \"client_email\": \"priya123@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8001/book",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8001",
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bookings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8001/bookings?email=priya123@gmail.com",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8001",
+					"path": [
+						"bookings"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "priya123@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
